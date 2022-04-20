@@ -1,0 +1,29 @@
+@api = http://localhost:8000
+
+### get tasks
+GET {{api}}/api/tasks
+
+### create task
+POST {{api}}/api/tasks
+Content-Type: application/json
+
+{
+    "name": "ci/cd pipeline",
+    "projectId": 1
+}
+
+### get task
+GET {{api}}/api/tasks/1
+
+### delete task
+DELETE {{api}}/api/tasks/1
+
+### update task
+PUT {{api}}/api/tasks/1
+Content-Type: application/json
+
+{
+    "name": "testing",
+    "done": true,
+    "projectId": 1
+}
